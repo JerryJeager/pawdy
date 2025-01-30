@@ -1,7 +1,8 @@
 // import { FormEvent } from "react";
+import { Link } from "react-router";
 import check from "/check.png";
 import checkgood from "/checkgood.png";
-import lineArrow from "/lineArrow.png"
+import lineArrow from "/lineArrow.png";
 
 const Signin2 = () => {
   //   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
@@ -34,10 +35,15 @@ const Signin2 = () => {
             <img src={checkgood} alt="" />
           </div>
         </button>
-        <button className="bg-primary text-white rounded-3xl mx-auto p-3 w-[150px] text-center mt-8 flex gap-1 items-center justify-center">
-          <p>Continue</p> 
-          <div><img src={lineArrow} alt="" /></div>
-        </button>
+        <Link
+          to={"/sign-in/3"}
+          className="bg-primary text-white rounded-3xl mx-auto p-3 w-[150px] text-center mt-8 flex gap-1 items-center justify-center"
+        >
+          <p>Continue</p>
+          <div>
+            <img src={lineArrow} alt="" />
+          </div>
+        </Link>
       </div>
     </main>
   );
