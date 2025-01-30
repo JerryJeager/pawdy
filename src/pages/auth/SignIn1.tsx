@@ -1,6 +1,7 @@
 import mascot from "/mascot2.png";
 import arrow from "/arrow2.svg";
 import { FormEvent } from "react";
+import { Link } from "react-router";
 const SignIn1 = () => {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -29,9 +30,12 @@ const SignIn1 = () => {
               />
             </div>
           </div>
-          <button className="absolute right-3 h-10 bottom-1 bg-white">
+          <Link
+            to={"/sign-in/2"}
+            className="absolute right-3 h-10 bottom-1 bg-white"
+          >
             <img src={arrow} alt="submit" className="h-full" />
-          </button>
+          </Link>
         </form>
       </div>
     </main>
