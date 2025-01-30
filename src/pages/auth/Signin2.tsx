@@ -1,9 +1,9 @@
 import { FormEvent } from "react";
 
 const Signin2 = () => {
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-  };
+//   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+//     e.preventDefault();
+//   };
   return (
     <main className="bg-secondary h-screen mx-[5%]">
       <div className="mt-24">
