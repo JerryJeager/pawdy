@@ -3,7 +3,7 @@ import App from "../App";
 import SignIn1 from "../pages/auth/SignIn1";
 import Signin2 from "../pages/auth/Signin2";
 import Signin3 from "../pages/auth/Signin3";
-import Chat from "../pages/chat/chat";
+import Chat from "../pages/chat/ChatPage";
 
 
 const router = createBrowserRouter([
