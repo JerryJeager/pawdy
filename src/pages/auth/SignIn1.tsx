@@ -1,10 +1,18 @@
 import mascot from "/mascot2.png";
 import arrow from "/arrow2.svg";
-import { FormEvent } from "react";
-import { Link } from "react-router";
+import { FormEvent, useState } from "react";
+import {useNavigate } from "react-router-dom";
+
 const SignIn1 = () => {
+  const [userName, setUserName] = useState("");
+  const navigate = useNavigate();
+
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    localStorage.setItem("pawdy_user", userName);
+
+    navigate("/sign-in/2");
   };
   return (
     <main className="bg-secondary h-screen mx-[5%]">
@@ -25,17 +33,16 @@ const SignIn1 = () => {
             <div className="">
               <input
                 type="text"
+                value={userName}
+                onChange={(e) => setUserName(e?.target?.value)}
                 className="p-3 h-12 rounded-xl outline-none text-primary z-2 mt-3 w-full bg-white placeholder:text-tertiary absolute bottom-0"
                 placeholder="Choose a Nickname"
               />
             </div>
           </div>
-          <Link
-            to={"/sign-in/2"}
-            className="absolute right-3 h-10 bottom-1 bg-white"
-          >
+          <button className="absolute right-3 h-10 bottom-1 bg-white">
             <img src={arrow} alt="submit" className="h-full" />
-          </Link>
+          </button>
         </form>
       </div>
     </main>

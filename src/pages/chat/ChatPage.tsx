@@ -10,6 +10,7 @@ const apiKey = import.meta.env.VITE_GOOGLE_AI_API_KEY;
 const ChatPage = () => {
   const [aiResponse, setAiResponse] = useState<string | null>(null);
   const { transcript, listening, resetTranscript } = useSpeechRecognition();
+  const rolePlay = localStorage.getItem("pawdy_role_play");
 
   const sendToAI = async () => {
     if (!transcript) return;
@@ -77,9 +78,7 @@ const ChatPage = () => {
     <div className="flex flex-col items-center justify-center h-screen bg-gradient-to-br from-orange-100 to-red-50 p-6">
       <div className="w-full max-w-md text-center">
         <h2 className="text-lg font-medium text-gray-600">Role Playing</h2>
-        <h1 className="text-2xl font-semibold text-red-700">
-          Overcoming Depression
-        </h1>
+        <h1 className="text-2xl font-semibold text-primary">{rolePlay}</h1>
 
         <div className="mt-6 bg-tertiary p-6 rounded-full text-white text-lg font-bold">
           {listening ? "Listening..." : "Tap to Speak"}
