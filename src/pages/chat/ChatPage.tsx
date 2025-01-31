@@ -81,14 +81,14 @@ const ChatPage = () => {
           Overcoming Depression
         </h1>
 
-        <div className="mt-6 bg-red-200 p-6 rounded-full text-white text-lg font-bold">
+        <div className="mt-6 bg-tertiary p-6 rounded-full text-white text-lg font-bold">
           {listening ? "Listening..." : "Tap to Speak"}
         </div>
 
         <div className="flex justify-center gap-4">
           <button
             onClick={handleVoice}
-            className="mt-6 px-6 py-3 bg-red-600 text-white rounded-lg shadow-lg hover:bg-red-700 transition"
+            className="mt-6 px-6 py-3 bg-primary text-white rounded-lg shadow-lg hover:bg-primary transition"
           >
             {listening ? "Stop Recording" : "Start Speaking"}
           </button>
@@ -96,7 +96,7 @@ const ChatPage = () => {
           {transcript && !listening && (
             <button
               onClick={sendToAI}
-              className="mt-6 px-6 py-3 bg-blue-600 text-white rounded-lg shadow-lg hover:bg-blue-700 transition"
+              className="mt-6 px-6 py-3 bg-gray-600 text-white rounded-lg shadow-lg hover:bg-gray-700 transition"
             >
               Get AI Response
             </button>
