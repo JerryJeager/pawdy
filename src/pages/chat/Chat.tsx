@@ -7,7 +7,7 @@ import axios from "axios";
 
 const apiKey = import.meta.env.VITE_GOOGLE_AI_API_KEY;
 
-const Chat = () => {
+const chat = () => {
   const [aiResponse, setAiResponse] = useState<string | null>(null);
   const { transcript, listening, resetTranscript } = useSpeechRecognition();
 
@@ -119,4 +119,4 @@ const Chat = () => {
   );
 };
 
-export default Chat;
+export default chat;
