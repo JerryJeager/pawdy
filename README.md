@@ -32,7 +32,7 @@ Pawdy is an AI-powered chatbot designed to provide mental health support through
 Pawdy's AI model was trained using a dataset compiled in Google Sheets, containing structured mental health conversation patterns.  
 
 You can access the dataset here:  
-📄 **[Pawdy Training Dataset]([YOUR_GOOGLE_SHEETS_LINK_HERE](https://docs.google.com/spreadsheets/d/1UySGV8zAWlTdu9jbe4CxsPYpjx_S3ecOwa14LfessCA/edit?usp=sharing))**  
+📄 **[Pawdy Training Dataset](https://docs.google.com/spreadsheets/d/1UySGV8zAWlTdu9jbe4CxsPYpjx_S3ecOwa14LfessCA/edit?usp=sharing)**  
 
 The dataset includes:
 - Common mental health concerns and responses
